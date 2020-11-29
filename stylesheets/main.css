@@ -133,6 +133,7 @@ svg#clouds {
     position: absolute;
     bottom: 0px;
     width: 100%;
+    z-index: 1000;
 }
 
 .section__intro {
@@ -252,7 +253,7 @@ svg#clouds {
 }
 
 .headline__heading {
-    font-size: clamp(36px, 1.25vw, 2.875em);
+    font-size: clamp(26px, 1.25vw, 2.875em);
 }
 
 .component {
@@ -473,6 +474,7 @@ ul.card__list__container {
 .pricing__cards {
     margin-top: 7em;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
@@ -662,7 +664,7 @@ input[type='email']:focus {
 }
 
 .callout__content{
-    font-size: clamp(14px, 3vw, 1.75em);
+    font-size: clamp(16px, 3vw, 1.75em);
 }
 
 .cta__link{
@@ -686,12 +688,14 @@ input[type='email']:focus {
     .nav ul{
         margin: 1.5em 0;
     }
-
+    .headline__paragraph__container{
+        max-width: 70vw;
+    }
     .section__intro{
         height: auto;
     }
     .component{
-        width: 80vw;
+        width: 90vw;
     }
     .img__container{
         max-width: 90vw;
@@ -699,6 +703,12 @@ input[type='email']:focus {
     }
     iframe{
         height: 400px;
+    }
+    /* .testimonial__row:nth-child(1){
+        border-bottom: 2px solid black;
+    } */
+    .img__btn__container{
+        bottom: -40px;
     }
 }
 
@@ -715,7 +725,7 @@ input[type='email']:focus {
         height: auto;
     }
     .testimonial__row:nth-child(1){
-        border-bottom: 24px solid var(--color_palette__background--main);
+        border-bottom: 2px solid var(--color_palette__background--main);
     }
     .testimonial__content{
         max-width: 88vw;
@@ -723,19 +733,24 @@ input[type='email']:focus {
     }
     .pricing__cards{
         display: block;
-        max-width: 55vw;
+        max-width: 85vw;
         margin: 0 auto;
     }
     .pricing__card{
         margin-top: 5em;
     }
+    .form{
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 1280px) and (min-width: 771px){
     .pricing__cards{
-        display: block;
-        margin: auto;
-        
+        max-width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 0 auto;
     }
     .pricing__card{
         margin-top: 5em;
